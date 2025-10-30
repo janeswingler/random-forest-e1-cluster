@@ -44,7 +44,6 @@ Feature ranking (Mean Decrease in Accuracy) identified markers consistent with t
 ## Evaluation & Usefulness
 - **Predictive performance:** Near-perfect OOB accuracy (99.655%) with perfect recall indicates the model reliably identifies e1 cells while keeping false negatives at zero in OOB evaluation. The small verification set was classified correctly with confident probabilities, consistent with strong generalization, though its size limits statistical conclusions.
 - **Interpretability & domain alignment:** The top features align with known e1 biology (TESPA1, LINC00507, SLC17A7), and the lack of KCNIP1 expression is also predictive, supporting that the classifier’s signals are biologically meaningful, not spurious.
-- **Operational readiness:** The saved RDS model supports straightforward runtime inference with class probabilities, suitable for downstream pipelines that require confidence thresholds.
 - **Limitations:** The samples-to-features ratio (871 samples, 608 features) is high-dimensional; OOB helps, but external validation on a larger independent set would better quantify generalization. The verification set here is intentionally minimal (n=2) and should be expanded before deployment.
 
 ## References
